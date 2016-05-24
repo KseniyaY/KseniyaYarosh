@@ -1,0 +1,88 @@
+.theaterStage {
+  height: 500px;
+  overflow: hidden;
+  width: 100%;
+  background: url(../images/Romanian_Opera_House_Timisoara_cut_2.jpg) center 0;
+/*  background-position: center;*/
+  background-size: cover;
+  border-radius: 0px 0px 175px 175px;
+  text-align: center;
+}
+
+
+.backStage {
+  height: 500px;
+  overflow: hidden;
+  width: 100%;
+  background: url(../images/theaterBackstage.jpg) center 0;
+ /* background-position: center;*/
+  background-size: cover;
+  border-radius: 0px 0px 175px 175px;
+  text-align: center;
+}
+
+.socialize-item {
+  display: inline-block;
+  float: right;
+  padding: 0px 10px 0px 10px;
+  margin: 25px 25px 0px 0px;
+  color: #aaa;
+  font-size: 33px;
+}
+
+.socialize-item:hover {
+  transform: scale(1.75);
+  -ms-transform: scale(1.75); /* IE 9 */
+  -webkit-transform: scale(1.75); /* Safari */
+  transform: scale(1.75);
+}
+
+
+.slogan h1, span {
+  color: white;
+  text-transform: uppercase;
+}
+
+.slogan h1 {
+  margin: 125px 0px 80px 0px;
+  font-size: 44px;
+  font-weight: bold;
+}
+
+.slogan span {
+  font-size: 22px;
+  padding: 10px;
+  border-radius: 15px;
+  border: 2px solid white;
+}
+
+.menuList {
+  margin: 75px auto;
+  text-align: center;
+} 
+
+.menu-item {
+  margin: 10px;
+  display: inline-block;
+  padding: 10px;
+  font-size: 22px;
+  border-radius: 15px;
+  border: 2px solid white;
+}
+
+.menu-item:hover {
+  transform: scale(1.2);
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari */
+  transform: scale(1.2);
+}
+
+.menu-item--link {
+  text-decoration: none;
+  color: white;
+}
+
+.menu-item--link:hover {
+  text-decoration: none;
+/*  color: #2e5cb8;*/
+}

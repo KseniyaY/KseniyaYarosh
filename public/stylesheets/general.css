@@ -1,0 +1,47 @@
+@import (reference) "mixins.less";
+@import (reference) "variables.less";
+
+@font-face {
+    font-family: "FontAwesome"; /* Имя шрифта */
+    src: url('fonts/fontawesome-webfont.ttf'); /* Путь к файлу со шрифтом */
+    font-family: 'DS StandartCyr', Arial; /* Имя шрифта */
+    src: url('fonts/dsstnd.ttf'); /* Путь к файлу со шрифтом */
+}
+
+body {
+  margin: 0 auto;
+  min-height: 100%;
+  background: #000;
+  /*background: -webkit-linear-gradient(rgba(0,0,0,1) 0%, rgba(0,0,0,1) 7%, rgba(36,36,36,1) 15%, rgba(54,54,54,1) 23%, rgba(56,56,56,1) 24%, rgba(87,87,87,1) 36%, rgba(87,87,87,1) 36%, rgba(143,143,143,1) 70%, rgba(153,153,153,1) 80%, rgba(179,179,179,1) 89%, rgba(204,204,204,1) 100%);
+  background: -o-linear-gradient(rgba(0,0,0,1) 0%, rgba(0,0,0,1) 7%, rgba(36,36,36,1) 15%, rgba(54,54,54,1) 23%, rgba(56,56,56,1) 24%, rgba(87,87,87,1) 36%, rgba(87,87,87,1) 36%, rgba(143,143,143,1) 70%, rgba(153,153,153,1) 80%, rgba(179,179,179,1) 89%, rgba(204,204,204,1) 100%);
+  background: linear-gradient(rgba(0,0,0,1) 0%, rgba(0,0,0,1) 7%, rgba(36,36,36,1) 15%, rgba(54,54,54,1) 23%, rgba(56,56,56,1) 24%, rgba(87,87,87,1) 36%, rgba(87,87,87,1) 36%, rgba(143,143,143,1) 70%, rgba(153,153,153,1) 80%, rgba(179,179,179,1) 89%, rgba(204,204,204,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#cccccc', GradientType=0);*/
+}
+
+.pageWrapper {
+  position: relative;
+  margin: 0 auto;
+  min-width: 100%;
+  min-height: 100%;
+}
+@media all and (min-width: 1000px) {
+  .pageWrapper {
+    max-width: 80%;
+  }
+}
+.footerWrapper {
+  /*этот контейнер дублирует общий контейнер wrap с позиционированием relative,
+	но при этом добляет педдинг непосредственно под футер и защищает его от влияния текста контента*/
+  margin: 0 auto;
+  min-height: 100%;
+  /*именно min-height, иначе при обычном свойстве height:100; контент перекроет футер*/
+  padding-bottom: 1px;
+  /*чтобы футер был прижат, нам обязательно необходимо указать для него именно фиксированную высоту, а основному диву контента добавить свойство padding-bottom:75px (конкретно то фиксированное значение, которое мы выбрали для высоты футера)*/
+  /*этот контейнер дублирует общий контейнер wrap с позиционированием relative,
+	но при этом добляет педдинг непосредственно под футер и защищает его от влияния текста контента*/
+  /*именно min-height, иначе при обычном свойстве height:100; контент перекроет футер*/
+  /*чтобы футер был прижат, нам обязательно необходимо указать для него именно фиксированную высоту, а основному диву контента добавить свойство padding-bottom:75px (конкретно то фиксированное значение, которое мы выбрали для высоты футера)*/
+}
+.clearfix {
+  clear: both;
+}

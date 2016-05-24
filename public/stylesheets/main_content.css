@@ -1,0 +1,173 @@
+.typeText {
+	margin: 30px 15px 30px 15px;
+	text-align: center;
+	font-size: 33px;
+	text-transform: uppercase;
+	color: white;
+}
+
+.contentWrapper {
+	background-color: white;
+	border-radius: 175px 175px 0px 0px;
+}
+
+.me {
+	padding: 80px 15px 30px 15px;
+	text-align: center;
+	color: black;
+
+}
+
+.me-label {
+	overflow: hidden;
+	margin: 10px;
+	display: block;
+	text-align: center;
+	padding: 0% 40% 0% 40%;
+	color: #3d5c5c;
+
+}
+.me-label--title {
+	padding: 10px;
+	border-radius: 15px;
+  	border: none;
+  	font-size: 22px;
+  	color: white;
+	background-color: #e6b800;
+}
+
+.backToTop {
+	display: block;
+	margin-top: 25px;
+	text-align: left;
+	text-decoration: none;
+	text-transform: capitalize;
+	color: #e6b800;
+	font-size: 15px;
+}
+
+.me-myPic {
+	display: inline-block;
+	margin: 0px -11px 25px -11px;
+	z-index: 10;
+}
+
+.me-myPic img {
+	border-radius: 100%;
+	border: 7px solid #e6b800;
+
+}
+
+.me-myFirstName, .me-myLastName {
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 33px;
+	font-weight: bold;
+	color: black;
+	padding: 15px;
+	border: 2px solid #e6b800;
+}
+
+.me-myFirstName {
+	border-right: none;
+}
+.me-myLastName {
+	border-left: none;
+}
+
+.me-myInfo, .me-myWorks, .me-contact {
+	text-align: justify;
+	font-size: 18px;
+	padding: 30px 75px 30px 75px;
+	color: #3d5c5c;
+}
+
+.skills {
+	display: inline-block;
+	font-size: 20px;
+}
+.skills-Badge {
+	overflow: hidden;
+	margin: 15px 10px 15px 10px;
+	padding: 7px;
+	border-radius: 7px;
+	color: white;
+	background-color: #999999;
+}
+
+.me-myWorks {
+	margin: 0 auto;
+	text-align: center;
+}
+.me-myWorks--link img {
+	display: inline-block;
+	margin: 20px 15px 20px 15px;
+	width: 15%;
+	height: 15%;
+}
+
+.me-myWorks--link:hover img {
+	display: inline-block;
+	margin: 80px 15px 80px 15px;
+	transform: scale(2.5);
+
+	/*width: 55%;
+	height: 55%;*/
+}
+
+.me-contact--mailbox {
+	display: block;
+	font-size: 22px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: #999999;
+
+}
+
+.me-contact--form {
+	display: inline-block;
+	margin: 0 auto 30px;
+}
+
+.me-contact--form input, .me-contact--form textarea {
+	overflow: hidden;
+	padding: 7px;
+	border-radius: 7px;
+  	border: 2px solid #999999;
+  	font-size: 17px;
+
+}
+
+.visitorData, .submitWrapper {
+	display: inline-block;
+}
+
+.visitorData input {
+	margin: 0px 10px 15px 10px;
+	text-indent: 5px;
+}
+
+.visitorFeedback {
+	display: block;
+}
+
+
+.afterSend {
+	display: none;
+	font-size: 20px;
+	padding: 30px 75px 30px 75px;
+	color: #3d5c5c;
+}
+
+#sendButton {
+	overflow: hidden;
+	float: right;
+	margin: 10px;
+	padding: 10px 50px 10px 50px;
+	border-radius: 7px;
+	border: none;
+	color: white;
+	background-color: #e6b800;
+}

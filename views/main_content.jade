@@ -1,0 +1,108 @@
+body
+	.pageWrapper
+		.footerWrapper
+			.typeText
+			.contentWrapper
+				.me
+					span.me-myFirstName Kseniya
+					div#aboutMe.me-myPic
+						img(src="../images/profilePic.jpg" alt="It's Me")
+					span.me-myLastName Yarosh
+					.me-label
+						h2.me-label--title About me
+					.me-myInfo 
+						p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+
+						p More detailed description of choosen scope will be placed here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+
+						p More detailed description of choosen scope will be placed here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+
+						hr
+
+						h3.skills Skills:
+						span.skills-Badge HTML/HTML5
+						span.skills-Badge Jade
+						span.skills-Badge CSS/CSS3
+						span.skills-Badge LESS
+						span.skills-Badge Bootstrap
+						span.skills-Badge JavaScript
+						span.skills-Badge AJAX
+						span.skills-Badge jQuery
+						span.skills-Badge Angular.js
+						span.skills-Badge QA
+
+						a.backToTop(href="#ancor") Back to top
+
+					div#myWorks.me-label
+						h2.me-label--title My works
+					.me-myWorks
+						a.me-myWorks--link(href="https://github.com/KseniyaY" target="_blank")
+							img(src="../images/kappe.jpg" alt="My training project")
+						a.me-myWorks--link(href="https://github.com/KseniyaY" target="_blank")
+							img(src="../images/go-between.jpg" alt="My training project")
+						a.me-myWorks--link(href="https://github.com/KseniyaY" target="_blank")
+							img(src="../images/kseniyayarosh.png" alt="My  current site")				
+
+
+						a.backToTop(href="#ancor") Back to top
+
+					div#contactMe.me-label
+						h2.me-label--title Contact me
+					.me-contact
+						a.me-contact--mailbox(href="mailto:xenia.yarosh@gmail.com") xenia.yarosh@gmail.com
+
+					form.me-contact--form(name="sendMessageForm")
+						.visitorData
+							input#visitorName(type="text" name="visitorName" placeholder="Your name")
+							input#visitorEmail(type="email" name="visitorEmail" placeholder="Your Email" required)
+						.visitorMessage
+							textarea#visitorMessage(rows="10" cols="50" maxlength="425" name="visitorMessage" placeholder="Write your message" wrap="hard" required)
+						//- .submitWrapper
+						.submit
+								input#sendButton(type="submit" value="Send")
+
+					.afterSend
+						p.afterSend-thanks Thank you for getting in touch!
+						p.afterSend-respond I will respond as soon as possible.
+						p.afterSend-wishes Have a good day!			
+
+						a.backToTop(href="#ancor") Back to top	
+
+
+
+
+
+			script(type="text/javascript").
+				var text = "Welcome to my place!\nGlad to see you here!";
+				i = 0;
+				function type(){
+					i++;
+					if( i <= text.length )
+						document.querySelector(".typeText").innerHTML = text.substring(0, i);
+
+					setTimeout(type, 150);
+				}
+
+				//- function disappear(){
+				//- 	document.querySelector(".typeText").style.visibility="hidden";
+				//- 	setTimeout(disappear, 12000);
+				//- }
+
+				
+				type();
+				disappear();
+
+				//- var text = "Dear guest, welcome to my site!";
+				//- i = 0;
+
+				//- function type(someString){
+				//- 	var someString = this;
+				//- 	i++;
+				//- 	if( i <= this.length )
+				//- 		document.querySelector(".typeText").innerHTML = this.substring(0, i);
+
+				//- 	setTimeout(type, 50);
+				//- }
+
+				//- type(text);
+	

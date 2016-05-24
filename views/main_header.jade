@@ -1,0 +1,49 @@
+header
+	div.background.theaterStage
+		ul.socialize
+			li#ancor.socialize-item
+				a.socialize-item--linkedIn(href='https://ua.linkedin.com/in/kseniya-yarosh-00846911b', tagret='_blank')
+					i.fa.fa-linkedin-square
+			li.socialize-item
+				a.socialize-item--github(href='https://github.com/KseniyaY', tagret='_blank')
+					i.fa.fa-github-square
+			li.socialize-item
+				a.socialize-item--pinterest(href='https://ru.pinterest.com/okyarosh/', tagret='_blank')
+					i.fa.fa-pinterest-square
+		.slogan
+			h1.mainPart Front-end is when you look at things this way
+			.replacedPart
+			span#backStage instead of that one
+
+		//- .typeText	
+
+		.menu
+			ul.menuList
+				li.menu-item
+					a.menu-item--link.about(href='#aboutMe', tagret='') About me
+				li.menu-item
+					a.menu-item--link.works(href='#myWorks', tagret='') My works
+				li.menu-item
+					a.menu-item--link.contact(href='#contactMe', tagret='') Contact me
+
+
+	
+script.
+	$(document).ready(function(){
+	$("#backStage").hover(function(){
+	$(".theaterStage").css({'background': 'url(../images/theaterBackstage.jpg) center 0', 'background-size': 'cover'}),
+	$(".mainPart").css({'visibility': 'hidden'}),
+	$(".mainPart").text("Hello world!");
+	}, function(){
+	$(".theaterStage").css({'background': 'url(../images/Romanian_Opera_House_Timisoara_cut_2.jpg) center 0', 'background-size': 'cover'}),
+	$(".replacedPart").css({"display": "none"}),
+	$(".mainPart").text("Front-end is when you look at things this way!"),
+	$(".mainPart").css({'visibility': 'visible'});
+	});
+	//- $("#backStage").hover(function(){
+	//- $(".slogan").fadeOut();
+	//- }, function(){
+	//- $(".slogan").fadeIn();
+	//- });
+	});
+

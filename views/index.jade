@@ -1,8 +1,6 @@
-extends layout
+extends main_head
 
 block content
-  h1= title
-  p Welcome to #{title}
-  p Blablabla
-  img(src="images/sports_activities_resized.jpg" style={height: '250px', width: '250px'})
-  a(href="/page2") Go further
+	include main_header
+	include main_content
+	include main_footer
