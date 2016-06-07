@@ -59,38 +59,42 @@ body
 							textarea#visitorMessage(rows="10" cols="50" maxlength="425" name="visitorMessage" placeholder="Write your message" wrap="hard" required)
 						//- .submitWrapper
 						.submit
-								input#sendButton(type="submit" value="Send")
+								input#sendButton(type="submit" value="Send" data-toggle='modal', data-target='#afetrSend')
 
-					.afterSend
-						p.afterSend-thanks Thank you for getting in touch!
-						p.afterSend-respond I will respond as soon as possible.
-						p.afterSend-wishes Have a good day!			
+					#afterSend.modal.fade(role='dialog')
+						.modal-dialog
+							.modal-content
+								.modal-header
+									h4.afterSend-thanks Thank you for getting in touch!
+								.modal-body
+									p.afterSend-respond I will respond as soon as possible.
+									p.afterSend-wishes Have a good day!			
 
-						a.backToTop(href="#ancor") Back to top	
+								a.backToTop(href="#ancor") Back to top	
 
 
 
 
 
 			script(type="text/javascript").
-				var text = "Welcome to my place!\nGlad to see you here!";
-				i = 0;
-				function type(){
-					i++;
-					if( i <= text.length )
-						document.querySelector(".typeText").innerHTML = text.substring(0, i);
+				//- var text = "Welcome to my place!\nGlad to see you here!";
+				//- i = 0;
+				//- function type(){
+				//- 	i++;
+				//- 	if( i <= text.length )
+				//- 		document.querySelector(".typeText").innerHTML = text.substring(0, i);
 
-					setTimeout(type, 150);
-				}
-
-				//- function disappear(){
-				//- 	document.querySelector(".typeText").style.visibility="hidden";
-				//- 	setTimeout(disappear, 12000);
+				//- 	setTimeout(type, 150);
 				//- }
 
+				//- //- function disappear(){
+				//- //- 	document.querySelector(".typeText").style.visibility="hidden";
+				//- //- 	setTimeout(disappear, 12000);
+				//- //- }
+
 				
-				type();
-				disappear();
+				//- type();
+				//- disappear();
 
 				//- var text = "Dear guest, welcome to my site!";
 				//- i = 0;
@@ -105,4 +109,27 @@ body
 				//- }
 
 				//- type(text);
-	
+				
+
+				//- $(function(){
+				//- 	sendMail();
+				//- });
+
+				//- function sendMail () {
+				//- 	var visitorName, visitorEmail, visitorMessage;
+				//- 	$("#sendButton").click(function() {
+				//- 		console.log('start function')
+				//- 		visitorName = $("#visitorName").val();
+				//- 		visitorEmail = $("#visitorEmail").val();
+				//- 		visitorMessage = $("#visitorMessage").val();
+				//- 		console.log('get data');
+				//- 		$.post("/", {
+				//- 			visitorName: visitorName,
+				//- 			visitorEmail: visitorEmail,
+				//- 			visitorMessage: visitorMessage
+				//- 		})
+				//- 		console.log('post done');
+				//- 		return false;
+				//- 	}) //чтобы не перезагружалась страничка, в качестве альтернативы preventDefault
+				//- }
+

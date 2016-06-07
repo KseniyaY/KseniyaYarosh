@@ -1,0 +1,4 @@
+.idia
+node_modules
+logs
+bin/config.js
