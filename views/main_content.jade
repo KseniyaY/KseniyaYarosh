@@ -1,135 +1,176 @@
-body
-	.pageWrapper
-		.footerWrapper
-			.typeText
-			.contentWrapper
-				.me
-					span.me-myFirstName Kseniya
-					div#aboutMe.me-myPic
-						img(src="../images/profilePic.jpg" alt="It's Me")
-					span.me-myLastName Yarosh
-					.me-label
-						h2.me-label--title About me
-					.me-myInfo 
-						p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+main
+	a.upButton(href="#ancor") Back to top
+	.typeText
+	.container.contentWrapper
+	
 
-						p More detailed description of choosen scope will be placed here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+			//- span.me-myFirstName Kseniya
+			div#aboutMe.me-myPic.animated.flipInX
+				img(src="../images/myPic.png" alt="It's Me")
+			//- span.me-myLastName Yarosh
+			
+			.me-label
+				h2.me-label--title About me
+			.me-myInfo
+				.me-myInfo--title.scroll
+					h2 Changing stages: from marketing to front-end development
+				.me-myInfo--text
+					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
 
-						p More detailed description of choosen scope will be placed here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
 
-						hr
+					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
 
-						h3.skills Skills:
-						span.skills-Badge HTML/HTML5
-						span.skills-Badge Jade
-						span.skills-Badge CSS/CSS3
-						span.skills-Badge LESS
-						span.skills-Badge Bootstrap
-						span.skills-Badge JavaScript
-						span.skills-Badge AJAX
-						span.skills-Badge jQuery
-						span.skills-Badge Angular.js
-						span.skills-Badge QA
+					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
 
-						a.backToTop(href="#ancor") Back to top
+					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+					
+					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
 
-					div#myWorks.me-label
-						h2.me-label--title My works
-					.me-myWorks
-						a.me-myWorks--link(href="https://github.com/KseniyaY" target="_blank")
-							img(src="../images/kappe.jpg" alt="My training project")
-						a.me-myWorks--link(href="https://github.com/KseniyaY" target="_blank")
-							img(src="../images/go-between.jpg" alt="My training project")
-						a.me-myWorks--link(href="https://github.com/KseniyaY" target="_blank")
-							img(src="../images/kseniyayarosh.png" alt="My  current site")				
-
-
-						a.backToTop(href="#ancor") Back to top
-
-					div#contactMe.me-label
-						h2.me-label--title Contact me
-					.me-contact
-						a.me-contact--mailbox(href="mailto:xenia.yarosh@gmail.com") xenia.yarosh@gmail.com
-
-					form.me-contact--form(name="sendMessageForm")
-						.visitorData
-							input#visitorName(type="text" name="visitorName" placeholder="Your name")
-							input#visitorEmail(type="email" name="visitorEmail" placeholder="Your Email" required)
-						.visitorMessage
-							textarea#visitorMessage(rows="10" cols="50" maxlength="425" name="visitorMessage" placeholder="Write your message" wrap="hard" required)
-						//- .submitWrapper
-						.submit
-								input#sendButton(type="submit" value="Send" data-toggle='modal', data-target='#afetrSend')
-
-					#afterSend.modal.fade(role='dialog')
-						.modal-dialog
-							.modal-content
-								.modal-header
-									h4.afterSend-thanks Thank you for getting in touch!
-								.modal-body
-									p.afterSend-respond I will respond as soon as possible.
-									p.afterSend-wishes Have a good day!			
-
-								a.backToTop(href="#ancor") Back to top	
+			hr
+			.container.skills
+				//- span.col-lg-2.col-md-3.col-sm-3.col-xs-12.skills-Badge.titleBadge.vcenter Skills
+				//- span.col-lg-2.col-md-3.col-sm-3.col-xs-12.skills-Badge.vcenter HTML/HTML5
+				//- span.col-lg-2.col-md-3.col-sm-3.col-xs-12.skills-Badge.vcenter Jade
+				//- span.col-lg-2.col-md-3.col-sm-3.col-xs-12.skills-Badge.vcenter CSS/CSS3
+				//- span.col-lg-2.col-md-3.col-sm-3.col-xs-12.skills-Badge.vcenter LESS
+				//- span.col-lg-2.col-md-3.col-sm-3.col-xs-12.skills-Badge.vcenter Bootstrap
+				//- span.col-lg-2.col-md-3.col-sm-3.col-xs-12.skills-Badge.vcenter JavaScript
+				//- span.col-lg-2.col-md-3.col-sm-3.col-xs-12.skills-Badge.vcenter AJAX
+				//- span.col-lg-2.col-md-3.col-sm-3.col-xs-12.skills-Badge.vcenter jQuery
+				//- span.col-lg-2.col-md-3.col-sm-3.col-xs-12.skills-Badge.vcenter Angular.js
+				//- span.col-lg-2.col-md-3.col-sm-3.col-xs-12.skills-Badge.vcenter QA
+				//- span.col-lg-4.col-md-4.col-sm-4.col-xs-12.skills-Badge.vcenter High trainability
 
 
+				span.col-lg-12.col-md-12.col-sm-12.col-xs-12.skills-Badge.vcenter Skills
+				progress.skills-measurement(role="progressbar" value="80" max="100" data-transitiongoal="80") 
+				span.skills-instance HTML/HTML5
+				progress.skills-measurement(value="80" max="100") 
+				span.skills-instance JADE
+				progress.skills-measurement(value="80" max="100") 
+				span.skills-instance CSS/CSS3
+				progress.skills-measurement(value="75" max="100") 
+				span.skills-instance LESS
+				progress.skills-measurement(value="60" max="100") 
+				span.skills-instance Bootstrap
+				progress.skills-measurement(value="60" max="100")
+				span.skills-instance JavaScript
+				progress.skills-measurement(value="60" max="100")
+				span.skills-instance AJAX
+				progress.skills-measurement(value="50" max="100")
+				span.skills-instance jQuery
+				progress.skills-measurement(value="35" max="100")
+				span.skills-instance Angular.js
+				progress.skills-measurement(value="60" max="100")
+				span.skills-instance QA
+				progress.skills-measurement(value="75" max="100")
+				span.skills-instance Photoshop
+				progress.skills-measurement(value="99" max="100")
+				span.skills-instance High trainability
+
+
+			.container.certfication
+				.row
+					a.fancyimage(rel='group' href='images/front_end.jpg')
+						img.certificate.img-responsive.thumbnail(src='images/front_end.jpg')
+				.row
+					a.fancyimage(rel='group' href='images/QA.jpg')
+						img.certificate.img-responsive.thumbnail(src='images/QA.jpg')
 
 
 
-			script(type="text/javascript").
-				//- var text = "Welcome to my place!\nGlad to see you here!";
-				//- i = 0;
-				//- function type(){
-				//- 	i++;
-				//- 	if( i <= text.length )
-				//- 		document.querySelector(".typeText").innerHTML = text.substring(0, i);
+			.description
+				p.description-list 4.5 months/ 160 academic hours of theoretical knowledge and practical skills in FrontEnd Development.
+				br
 
-				//- 	setTimeout(type, 150);
-				//- }
+				ul.description-list 2 months of theoretical knowledge and practical skills in QA:
+					li SDLC (Waterfall, Agile/ Scrum), STLC;
+					li business requirements and functional specifications;
+					li common types and testing techniques – Ad-hoc testing, Error guessing, Decision Table Testing,
+					li Equivalence Partitioning & Boundary Value Analysis, Pairwise Testing (AllPairs tool), Exhaustive testing etc.;
+					li test documentation templates – test plans, test scenarios, check lists, test suits, test cases,
+					li traceability matrix;
+					li manual functional testing of web-services, MS Windows modules & apps, automation (Selenium IDE - basics);
+					li writing bug reports and monitoring the bug life cycle with respect to its categorization by severity and priority statuses etc.;
+					li applying of the test management and tracking systems (Atlassian JIRA, Mantis) etc.					
 
-				//- //- function disappear(){
-				//- //- 	document.querySelector(".typeText").style.visibility="hidden";
-				//- //- 	setTimeout(disappear, 12000);
-				//- //- }
+			hr
 
+			div#myWorks.me-label
+				h2.me-label--title My works
+			
+			.container.me-myWorks
+				.row
+					.col-md-3.col-sm-4.col-xs-6.thumbnail
+						a.fancyimage(rel='group' href='images/kappe.jpg')
+							img.img-responsive(src='images/kappe.jpg')
+
+					.col-md-3.col-sm-4.col-xs-6.thumbnail
+						a.fancyimage(rel='group' href='images/go-between.jpg')
+							img.img-responsive(src='images/go-between.jpg')
+
+					.col-md-3.col-sm-4.col-xs-6.thumbnail
+						a.fancyimage(rel='group' href='images/kseniyayarosh.jpg')
+							img.img-responsive(src='images/kseniyayarosh.jpg')			
+
+					.col-md-3.col-sm-4.col-xs-6.thumbnail
+						a.fancyimage(rel='group' href='images/gallery_stub.jpg')
+							img.img-responsive(src='images/gallery_stub.jpg')
+			
+					.col-md-3.col-sm-4.col-xs-6.thumbnail
+						a.fancyimage(rel='group' href='images/gallery_stub.jpg')
+							img.img-responsive(src='images/gallery_stub.jpg')
+
+					.col-md-3.col-sm-4.col-xs-6.thumbnail
+						a.fancyimage(rel='group' href='images/gallery_stub.jpg')
+							img.img-responsive(src='images/gallery_stub.jpg')
+
+					.col-md-3.col-sm-4.col-xs-6.thumbnail
+						a.fancyimage(rel='group' href='images/gallery_stub.jpg')
+							img.img-responsive(src='images/gallery_stub.jpg')
+
+					.col-md-3.col-sm-4.col-xs-6.thumbnail
+						a.fancyimage(rel='group' href='images/gallery_stub.jpg')
+							img.img-responsive(src='images/gallery_stub.jpg')															
+
+				hr#contactMe
+
+			div.me-label
+				h2.me-label--title Contact me
+
+			.me-contact
+				i.fa.fa-envelope
+				a.me-contact--mailbox(href="mailto:developing.frontend@gmail.com") developing.frontend@gmail.com
+
+				hr
+			
+				i.fa.fa-map
+				h3 My location	
+
+				.map#googleMap
+
+
+			i.fa.fa-paper-plane
 				
-				//- type();
-				//- disappear();
+			form.me-contact--form(name="sendMessageForm")
+				h3 Send your message right here and right now
 
-				//- var text = "Dear guest, welcome to my site!";
-				//- i = 0;
+				.visitorData
+					input#visitorName(type="text" name="visitorName" placeholder="Your name" required)
+					input#visitorEmail(type="email" name="visitorEmail" placeholder="Your Email" required)
+				.visitorMessage
+					textarea#visitorMessage(rows="10" cols="50" maxlength="425" name="visitorMessage" placeholder="Write your message" wrap="hard" required)
+				//- .submitWrapper
+				.submit
+						input#sendButton(type="submit" value="Send" data-toggle='modal', data-target='#afetrSend')
 
-				//- function type(someString){
-				//- 	var someString = this;
-				//- 	i++;
-				//- 	if( i <= this.length )
-				//- 		document.querySelector(".typeText").innerHTML = this.substring(0, i);
-
-				//- 	setTimeout(type, 50);
-				//- }
-
-				//- type(text);
-				
-
-				//- $(function(){
-				//- 	sendMail();
-				//- });
-
-				//- function sendMail () {
-				//- 	var visitorName, visitorEmail, visitorMessage;
-				//- 	$("#sendButton").click(function() {
-				//- 		console.log('start function')
-				//- 		visitorName = $("#visitorName").val();
-				//- 		visitorEmail = $("#visitorEmail").val();
-				//- 		visitorMessage = $("#visitorMessage").val();
-				//- 		console.log('get data');
-				//- 		$.post("/", {
-				//- 			visitorName: visitorName,
-				//- 			visitorEmail: visitorEmail,
-				//- 			visitorMessage: visitorMessage
-				//- 		})
-				//- 		console.log('post done');
-				//- 		return false;
-				//- 	}) //чтобы не перезагружалась страничка, в качестве альтернативы preventDefault
-				//- }
-
+			#afterSend.modal.fade(role='dialog')
+				.modal-dialog
+					.modal-content
+						.modal-header
+							button.close(type='button', data-dismiss='modal') &times;
+							h4.afterSend-thanks Thank you for getting in touch!
+						.modal-body
+							p.afterSend-respond I will respond as soon as possible.
+							p.afterSend-wishes Have a good day!

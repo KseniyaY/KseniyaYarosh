@@ -1,6 +1,12 @@
+html(lang='en')
+
 extends main_head
 
 block content
-	include main_header
-	include main_content
-	include main_footer
+	body
+	.pageWrapper
+		.footerWrapper
+			include main_header
+			include main_content
+			include main_footer
+

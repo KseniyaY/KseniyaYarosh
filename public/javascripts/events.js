@@ -1,137 +1,134 @@
-//изменение бекграунда при ховере на span как часть слогана
-$(document).ready(function(){
-	$("#backStage").hover(function(){
-	$(".theaterStage").css({'background': 'url(../images/theaterBackstage.jpg) center 0', 'background-size': 'cover'}),
-	$(".mainPart").css({'visibility': 'hidden'}),
-	$(".mainPart").text("Hello world!");
-	}, function(){
-	$(".theaterStage").css({'background': 'url(../images/Romanian_Opera_House_Timisoara_cut_2.jpg) center 0', 'background-size': 'cover'}),
-	$(".replacedPart").css({"display": "none"}),
-	$(".mainPart").text("Front-end is when you look at things this way!"),
-	$(".mainPart").css({'visibility': 'visible'});
+
+//изменение бекграунда при ховере на span как часть слогана. Способ №2:
+$(document).ready(function(e){
+    $("#backStage").mouseenter(function(){
+	    $(".mainPart").fadeTo(200, 0),
+		$("#backStage").fadeTo(350, 0),
+		$(".theaterStage").css({'transition':'1s', 'background': 'url(../images/theaterBackstage.jpg) center 0', 'background-size': 'cover'})
+    });
+    $(".theaterStage").mouseleave(function(){
+      	$(".theaterStage").css({'transition':'1s', 'background': 'url(../images/theater_top.jpg) center 0', 'background-size': 'cover'}),
+      	$(".mainPart").fadeTo(1000, 1),
+		$("#backStage").fadeTo(2750, 1)
+    });
+
+    //набор приветствия при загрузке странички
+	var text = "Welcome to my place!\nI'm glad to see you here!";
+	i = 0;
+
+	(function type(){
+		i++;
+		if( i <= text.length )
+			document.querySelector(".typeText").innerHTML = text.substring(0, i);
+			setTimeout(type, 90);	
+	})();
+
+	//animation along the scrolling
+	// $('.me-myPic').animated('bounceIn', 'bounceOut');
+	$('.me-myInfo').animated('fadeIn', 'fadeOut');
+	// $('.skills').ready(progress());
+	$('.skills').animated('fadeInLeft', 'fadeOutLeft', progress());
+	$('.certfication').animated('fadeInRight', 'fadeOutRight');
+	$('.description').animated('fadeIn', 'fadeOut');
+	$('.me-myWorks').animated('fadeIn', 'fadeOut');
+	$('.fa-map').animated('bounceIn', 'bounceOut');
+	$('.map').animated('fadeIn', 'fadeOut');
+	$('.me-contact--mailbox').animated('zoomIn', 'zoomOut');
+	$('.fa-envelope').animated('bounceIn', 'bounceOut');
+	$('.fa-paper-plane').animated('bounceIn', 'bounceOut');
+	// $('.me-contact--form').animated('zoomIn', 'zoomOut');
+
+	
+	//animate values of progress bars
+	function progress() {
+		setTimeout(function() {
+			$('progress').each(function() {
+    			var max = $(this).val();
+    			$(this).val(0).animate({ value: max }, { duration: 4250, easing: 'easeOutCirc' });
+			});
+		}, 250)
+	};
+
+	//запуск плагина fancybox
+	
+	$("a.fancyimage").fancybox();
+
+	
+
+	//прокрутка страницы вверх с анимацией при нажатии на кнопку upButton с надписью back to Top
+	$(".upButton").click(function() {
+  		$("html, body").animate({ scrollTop: 0 }, "slow");
+  	return false;
 	});
-	//- $("#backStage").hover(function(){
-	//- $(".slogan").fadeOut();
-	//- }, function(){
-	//- $(".slogan").fadeIn();
-	//- });
+
+	//one more interesting effect
+	// $(".upButton").mPageScroll2id();
+
+	// or one more alternative effect for all elements with attribute href and id
+	// $("a[href*='#']").mPageScroll2id();
+
+
+	//принудительная загрузка всех ссылок в новой вкладке
+	$('a').each(function() {
+	  var a = new RegExp('/' + window.location.host + '/');
+	  if(!a.test(this.href)) {
+	      $(this).click(function(event) {
+	          event.preventDefault();
+	          event.stopPropagation();
+	          window.open(this.href, '_blank');
+	      });
+	  }
 	});
 
-
-//набор приветствия при загрузке странички
-var text = "Welcome to my place!\nGlad to see you here!";
-i = 0;
-function type(){
-	i++;
-	if( i <= text.length )
-		document.querySelector(".typeText").innerHTML = text.substring(0, i);
-		setTimeout(type, 150);
-}
-
-type();
-
-
-
-//отправка сообщения из обратной формы на почтовый ящик
-$(function(){
-	// var visitorName = $("#visitorName").val();
-	// visitorEmail = $("#visitorEmail").val();
-	// visitorMessage = $("#visitorMessage").val();
-	// if(visitorName != "" || visitorEmail != "" || visitorMessage !="") {
-		sendMail();
-		respondOnSubmit();
 });
 
-function sendMail () {
-	var visitorName, visitorEmail, visitorMessage;
-			$("#sendButton").click(function() {
-				console.log('start function')
-				visitorName = $("#visitorName").val();
-				visitorEmail = $("#visitorEmail").val();
-				visitorMessage = $("#visitorMessage").val();
-				console.log('get data');
-				if(visitorName != "" && visitorEmail != "" && visitorMessage !="") {
-					$.post("/", {
-						visitorName: visitorName,
-						visitorEmail: visitorEmail,
-						visitorMessage: visitorMessage
-					})
-					console.log('post done')
-					$("textarea").val('');
-					return false; //чтобы не перезагружалась страничка, в качестве альтернативы preventDefault
-				}
-		});
-}
+//изменение бекграунда при ховере на span как часть слогана. Альтернативный способ:
+// $(document).ready(function(){
+// 	$("#backStage").click(function(){
+// 	$(".mainPart").css({'transition':'0.5s', 'visibility': 'hidden'}),
+// 	$("#backStage").css({'transition':'0.5s', "visibility": "hidden"}),
+// 	$(".theaterStage").css({'transition':'1s', 'background': 'url(../images/theaterBackstage.jpg) center 0', 'background-size': 'cover'})
+// 	// }, function(){
+// 	// 	$(".mainPart").css({'transition':'2s', 'visibility': 'visible'}),
+// 	// 	$("#backStage").css({'transition':'2s',"visibility": 'visible'}),
+// 	// 	$(".theaterStage").css({'transition':'1s', 'background': 'url(../images/theater_top.jpg) center 0', 'background-size': 'cover'});	
+// 	});
+// });
+
+//подгрузка контента при скроллинге(альтернативный сниппет)
+// jQuery('.post').addClass("hidden").viewportChecker({
+	// 	classToAdd:'visible animated fadeIn',
+	// 	offset:100
+	// });
 
 
-function respondOnSubmit () {
-		$("#sendButton").click(function() {
-			 if ($("#visitorName").val() != '' && $("#visitorEmail").val() != '') {
-	    			//открыть модальное окно с id="afterSend"
-		   		 	$("#afterSend").modal('hide');
-		   		}
-		   	else {
-		   			$("#afterSend").modal('show');
-		   	}	
-	  	});
-}
+//подгрузка контента при скроллинге (альтернативный сниппет 2)
 
+// if ($(window).width() <= 549) {
+//     if($(window).scrollTop() > 600) {
+//         // анимация, которая должны быть выполнена
+//         firstAnimation();
+//     }
+// } else if ($(window).width() > 549 && $(window).width() <= 991) {
+//     if($(window).scrollTop() > 480){
+//         // анимация, которая должны быть выполнена
+//         firstAnimation();
+//     }
+// } else {
+//     if ($(window).scrollTop() > 450) {
+//         // анимация, которая должны быть выполнена
+//         firstAnimation();
+//     }
+// }
 
-
-
-
-				//- var text = "Welcome to my place!\nGlad to see you here!";
-				//- i = 0;
-				//- function type(){
-				//- 	i++;
-				//- 	if( i <= text.length )
-				//- 		document.querySelector(".typeText").innerHTML = text.substring(0, i);
-
-				//- 	setTimeout(type, 150);
-				//- }
-
-				//- //- function disappear(){
-				//- //- 	document.querySelector(".typeText").style.visibility="hidden";
-				//- //- 	setTimeout(disappear, 12000);
-				//- //- }
-
-				
-				//- type();
-				//- disappear();
-
-				//- var text = "Dear guest, welcome to my site!";
-				//- i = 0;
-
-				//- function type(someString){
-				//- 	var someString = this;
-				//- 	i++;
-				//- 	if( i <= this.length )
-				//- 		document.querySelector(".typeText").innerHTML = this.substring(0, i);
-
-				//- 	setTimeout(type, 50);
-				//- }
-
-				//- type(text);
-				
-
-				//- $(function(){
-				//- 	sendMail();
-				//- });
-
-				//- function sendMail () {
-				//- 	var visitorName, visitorEmail, visitorMessage;
-				//- 	$("#sendButton").click(function() {
-				//- 		console.log('start function')
-				//- 		visitorName = $("#visitorName").val();
-				//- 		visitorEmail = $("#visitorEmail").val();
-				//- 		visitorMessage = $("#visitorMessage").val();
-				//- 		console.log('get data');
-				//- 		$.post("/", {
-				//- 			visitorName: visitorName,
-				//- 			visitorEmail: visitorEmail,
-				//- 			visitorMessage: visitorMessage
-				//- 		})
-				//- 		console.log('post done');
-				//- 		return false;
-				//- 	}) //чтобы не перезагружалась страничка, в качестве альтернативы preventDefault
-				//- }
+// var firstAnimation = function () {
+//     $('.scroll').each(
+//         function () {
+//             $(this).delay(500).animate({
+//                 opacity: 1,
+//                 // height: '180',
+//                 // width: '250'
+//             }, 2000);
+//         }
+//     );
+// };

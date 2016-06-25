@@ -1,21 +1,25 @@
 header
-	div.background.theaterStage
-		ul.socialize
-			li#ancor.socialize-item
-				a.socialize-item--linkedIn(href='https://ua.linkedin.com/in/kseniya-yarosh-00846911b', tagret='_blank')
-					i.fa.fa-linkedin-square
-			li.socialize-item
-				a.socialize-item--github(href='https://github.com/KseniyaY', tagret='_blank')
-					i.fa.fa-github-square
-			li.socialize-item
-				a.socialize-item--pinterest(href='https://ru.pinterest.com/okyarosh/', tagret='_blank')
-					i.fa.fa-pinterest-square
+
+	//- .background.theaterStage#ancor //мы можем привязать через id "якорь" (м. любое название) для того, чтобы при нажатии на определенный элемент, ссылающийся через href атрибут на имя этого "якоря" перейти непосредственно к месту, содержащему якорь. В данном случае можно было бы использовать этот прием для нажатия на кнопку upButton  с надписью "Back to Top", но я воспользовалась jQuery сниппетом, который скроллит страницу к самому верху через метод scrollTop (+ анимирует прокрутку)
+	.background.theaterStage
+
+		.headerMask
+			ul.socialize
+				li.socialize-item
+					p.keep Keep in touch
+				li.socialize-item
+					a.socialize-item--linkedIn(href='https://ua.linkedin.com/in/kseniya-yarosh-00846911b' tagret="_blank")
+						i.fa.fa-linkedin-square
+				li.socialize-item
+					a.socialize-item--github(href='https://github.com/KseniyaY' tagret="_blank")
+						i.fa.fa-github-square
+				li.socialize-item
+					a.socialize-item--pinterest(href='https://ru.pinterest.com/okyarosh/' tagret="_blank")
+						i.fa.fa-pinterest-square
 		.slogan
 			h1.mainPart Front-end is when you look at things this way
 			.replacedPart
-			span#backStage instead of that one
-
-		//- .typeText	
+				span#backStage instead of this one
 
 		.menu
 			ul.menuList
@@ -25,25 +29,3 @@ header
 					a.menu-item--link.works(href='#myWorks', tagret='') My works
 				li.menu-item
 					a.menu-item--link.contact(href='#contactMe', tagret='') Contact me
-
-
-	
-//- script.
-//- 	$(document).ready(function(){
-//- 	$("#backStage").hover(function(){
-//- 	$(".theaterStage").css({'background': 'url(../images/theaterBackstage.jpg) center 0', 'background-size': 'cover'}),
-//- 	$(".mainPart").css({'visibility': 'hidden'}),
-//- 	$(".mainPart").text("Hello world!");
-//- 	}, function(){
-//- 	$(".theaterStage").css({'background': 'url(../images/Romanian_Opera_House_Timisoara_cut_2.jpg) center 0', 'background-size': 'cover'}),
-//- 	$(".replacedPart").css({"display": "none"}),
-//- 	$(".mainPart").text("Front-end is when you look at things this way!"),
-//- 	$(".mainPart").css({'visibility': 'visible'});
-//- 	});
-//- 	//- $("#backStage").hover(function(){
-//- 	//- $(".slogan").fadeOut();
-//- 	//- }, function(){
-//- 	//- $(".slogan").fadeIn();
-//- 	//- });
-//- 	});
-

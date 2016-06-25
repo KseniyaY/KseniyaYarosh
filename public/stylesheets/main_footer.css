@@ -1,24 +1,54 @@
+@import "font-awesome.css";
+
 footer {
 	height: 150px;
 	background-color: black;
-	background: url(../images/Romanian_Opera_House_Timisoara_2.jpg) center 0;
+	background: url(../images/theater_down.jpg) center 0;
     background-size: cover;
 }
 
 .addMenu {
-	float: left;
-	margin: 35px 10px 10px 25px;
+	display: block;
+/*	float: left;*/
+/*	margin: 35px 10px 10px 55px;*/
+	padding-top: 55px;
+	margin: 0px auto;
+	text-align: center;
 }
 
 .addMenu-item {
 	display: inline-block;
-	font-size: 18px;
+	font-size: 22px;
 /*	font-weight: bold;*/
-	padding: 0px 10px 0px 10px;
+	padding: 0px 15px 0px 15px;
+	margin: 0 auto;
 
 }
 
 .addMenu-item--link {
 	color: white;
 	text-decoration: none;
+}
+
+.addMenu-item--link:hover {
+	text-decoration: none;
+}
+
+.copyright {
+	display: block;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 20px;
+	color: #fff;
+	font-size: 11px;
+}
+
+/*.socialize--footer {
+	margin-right: 15px;
+}*/
+
+@media all and (max-width: 1000px) {
+	.addMenu-item--link {
+		font-size: 14px;
+	}
 }

@@ -1,41 +1,67 @@
-.theaterStage {
-  height: 500px;
-  overflow: hidden;
-  width: 100%;
-  background: url(../images/Romanian_Opera_House_Timisoara_cut_2.jpg) center 0;
-/*  background-position: center;*/
-  background-size: cover;
-  border-radius: 0px 0px 175px 175px;
-  text-align: center;
+@font-face {
+    font-family: 'FeltTipWoman';
+    src: url('fonts/FeltTipWoman.ttf');
 }
 
-
-.backStage {
-  height: 500px;
-  overflow: hidden;
+.headerMask {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  height: 70px;
   width: 100%;
-  background: url(../images/theaterBackstage.jpg) center 0;
- /* background-position: center;*/
-  background-size: cover;
-  border-radius: 0px 0px 175px 175px;
-  text-align: center;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 15;
+}
+
+.socialize {
+  display: inline-block;
+  float: right;
 }
 
 .socialize-item {
   display: inline-block;
-  float: right;
   padding: 0px 10px 0px 10px;
-  margin: 25px 25px 0px 0px;
+  margin: 15px 25px 0px 0px;
   color: #aaa;
   font-size: 33px;
 }
 
-.socialize-item:hover {
+.keep {
+  font-family: "FeltTipWoman";
+  font-size: 25px;
+  color:  #e6b800;
+  text-transform: capitalize;
+  margin-top: 0px;
+}
+
+.socialize-item:not(:first-child):hover {
   transform: scale(1.75);
   -ms-transform: scale(1.75); /* IE 9 */
   -webkit-transform: scale(1.75); /* Safari */
   transform: scale(1.75);
 }
+
+.theaterStage {
+  height: 500px;
+  margin-bottom: 35px;
+  overflow: hidden;
+  width: 100%;
+  background: url(../images/theater_top.jpg) center 0;
+  background-size: cover;
+  border-radius: 0px 0px 175px 175px;
+  text-align: center;
+  -webkit-transition: background 1s ease;
+  -moz-transition: background 1s ease;
+  transition: background 1 ease;
+}
+
+
+.mainPart, #backStage {
+  -webkit-transition: visibility 2s ease;
+  -moz-transition: visibility 2s ease;
+  transition: visibility 2s ease;
+}
+
 
 
 .slogan h1, span {
@@ -57,32 +83,97 @@
 }
 
 .menuList {
+  position: relative;
   margin: 75px auto;
   text-align: center;
 } 
 
 .menu-item {
-  margin: 10px;
+/*  margin: 10px;*/
   display: inline-block;
   padding: 10px;
-  font-size: 22px;
-  border-radius: 15px;
-  border: 2px solid white;
+  font-size: 18px;
+/*  border-radius: 15px;*/
+  text-transform: uppercase;
+  background-color: rgba(255,255,255,0.5);
+}
+.menu-item:first-child{
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
 }
 
-.menu-item:hover {
-  transform: scale(1.2);
-  -ms-transform: scale(1.2); /* IE 9 */
-  -webkit-transform: scale(1.2); /* Safari */
-  transform: scale(1.2);
+.menu-item:last-child{
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
+
+
 
 .menu-item--link {
   text-decoration: none;
-  color: white;
+  color: black;
+  font-weight: bold;
 }
 
 .menu-item--link:hover {
   text-decoration: none;
-/*  color: #2e5cb8;*/
+  transform: scale(1.5);
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari */
+  transform: scale(1.5);
+/*  color: #e6b800;*/
+}
+
+
+@media all and (max-width: 1000px) {
+
+  .headerMask{
+    height: 50px;
+  }
+
+  .keep {
+    font-size: 17px;
+  }
+
+  .theaterStage {
+    border-radius: 0px 0px 75px 75px;
+    height: 370px;
+  }
+
+  .backStage {
+    border-radius: 0px 0px 75px 75px;
+    height: 370px;
+  }
+
+  .socialize-item {
+    font-size: 22px;
+    padding: 0px;
+  }
+
+  .slogan h1 {
+    font-size: 27px;
+    margin: 100px 15px 40px 15px;
+  }
+  
+  #backStage {
+    font-size: 15px;
+  }
+  
+  .menuList {
+    margin: 35px auto;
+  }
+
+  .menu-item {
+    font-size: 12px;
+    border: none;
+  }
+
+  .menu-item--link:hover {
+      transform: scale(1.1);
+      -ms-transform: scale(1.1); /* IE 9 */
+      -webkit-transform: scale(1.1); /* Safari */
+      transform: scale(1.1);
+  }
+
+
 }
